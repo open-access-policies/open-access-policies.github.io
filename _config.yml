@@ -1,8 +1,21 @@
 # Jekyll configuration for Hydejack theme
 # Documentation: https://hydejack.com/docs/
+# --- Site Settings ---
+title: "Open Access Policies"
+description: "Open source policies for any company."
+# url: "https://open-access-policies.github.io"
+baseurl: "/health-tech"
+
+# --- Hydejack Specific Settings ---
+hydejack:
+  theme: theme-base-08
+  sticky_sidebar: true 
+  accent_color: "#bababa" # Solid gray color for sidebar
+  invert_sidebar: false # Changed to false since we're using a light color
+  theme_color: "#bababa"
 
 # Theme
-theme: jekyll-theme-hydejack
+remote_theme: "hydecorp/hydejack@v9.2.1"
 
 # Site settings
 title: Portfolio
