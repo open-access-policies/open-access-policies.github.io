@@ -19,6 +19,9 @@ description: "Comprehensive policies for organizations to adapt and implement"
 url: "https://open-access-policies.github.io"
 baseurl: ""
 
+# --- Favicon Settings ---
+favicon: /assets/images/logo.png
+
 # Author information
 author:
   name   : "Sean Todd"
@@ -77,19 +80,15 @@ titles_from_headings:
   collections: true
 
 
+# Additional CSS files
+additional_css:
+  - /assets/css/main.css
 
-# 3rd Party Integrations
-google_analytics: # Your Google Analytics tracking ID
+# 3rd Party Integrations\
 google_fonts: false # Disable Google Fonts to use local Latin Modern Roman
 font_heading: "'LatinModernRoman', 'Latin Modern Roman', serif"
 font: "'LatinModernRoman', 'Latin Modern Roman', serif"
 
-# Social media and contact links
-social:
-  name: Your Name
-  links:
-    - https://twitter.com/username
-    - https://github.com/open-access-policies
 
 # Exclude from processing
 exclude:
