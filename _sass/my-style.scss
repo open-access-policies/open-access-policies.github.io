@@ -1,0 +1,49 @@
+/* Latin Modern Roman Font Imports */
+@font-face {
+  font-family: 'LatinModernRoman';
+  src: url('/assets/fonts/latinmodernroman_10regular_macroman/lmroman10-regular-webfont.woff2') format('woff2'),
+       url('/assets/fonts/latinmodernroman_10regular_macroman/lmroman10-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LatinModernRoman';
+  src: url('/assets/fonts/latinmodernroman_10bold_macroman/lmroman10-bold-webfont.woff2') format('woff2'),
+       url('/assets/fonts/latinmodernroman_10bold_macroman/lmroman10-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LatinModernRoman';
+  src: url('/assets/fonts/latinmodernroman_10italic_macroman/lmroman10-italic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/latinmodernroman_10italic_macroman/lmroman10-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LatinModernRoman';
+  src: url('/assets/fonts/latinmodernroman_10bolditalic_macroman/lmroman10-bolditalic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/latinmodernroman_10bolditalic_macroman/lmroman10-bolditalic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Override all fonts with Latin Modern Roman */
+* {
+  font-family: 'LatinModernRoman', serif !important;
+}
+
+html, body, .content, .page, .post {
+  font-family: 'LatinModernRoman', serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'LatinModernRoman', serif !important;
+}

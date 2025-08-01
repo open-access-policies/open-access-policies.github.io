@@ -1,10 +1,5 @@
 # Jekyll configuration for Hydejack theme
 # Documentation: https://hydejack.com/docs/
-# --- Site Settings ---
-title: "Open Access Policies"
-description: "Open source policies for any company."
-# url: "https://open-access-policies.github.io"
-baseurl: "/health-tech"
 
 # --- Hydejack Specific Settings ---
 hydejack:
@@ -18,10 +13,10 @@ hydejack:
 remote_theme: "hydecorp/hydejack@v9.2.1"
 
 # Site settings
-title: Open Access Policies
-tagline: Open source policies for any company.
-description: Comprehensive policies for organizations to adapt and implement.
-url: https://open-access-policies.github.io
+title: "Open Access Policies"
+tagline: "Open source policies for any company"
+description: "Comprehensive policies for organizations to adapt and implement"
+url: "https://open-access-policies.github.io"
 baseurl: ""
 
 # Author information
