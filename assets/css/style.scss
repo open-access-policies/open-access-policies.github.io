@@ -1,0 +1,89 @@
+---
+---
+
+/* Latin Modern Roman Font Imports */
+@font-face {
+  font-family: 'LatinModernRoman';
+  src: url('/assets/fonts/latinmodernroman_10regular_macroman/lmroman10-regular-webfont.woff2') format('woff2'),
+       url('/assets/fonts/latinmodernroman_10regular_macroman/lmroman10-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LatinModernRoman';
+  src: url('/assets/fonts/latinmodernroman_10bold_macroman/lmroman10-bold-webfont.woff2') format('woff2'),
+       url('/assets/fonts/latinmodernroman_10bold_macroman/lmroman10-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LatinModernRoman';
+  src: url('/assets/fonts/latinmodernroman_10italic_macroman/lmroman10-italic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/latinmodernroman_10italic_macroman/lmroman10-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LatinModernRoman';
+  src: url('/assets/fonts/latinmodernroman_10bolditalic_macroman/lmroman10-bolditalic-webfont.woff2') format('woff2'),
+       url('/assets/fonts/latinmodernroman_10bolditalic_macroman/lmroman10-bolditalic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Apply Latin Modern Roman to all text elements */
+html, body {
+  font-family: 'LatinModernRoman', serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'LatinModernRoman', serif !important;
+}
+
+p, div, span, a, li, td, th {
+  font-family: 'LatinModernRoman', serif !important;
+}
+
+/* Custom footer copyright */
+.page::after, 
+.content::after,
+main::after {
+  content: "© 2025. CC-BY-SA-4.0 Licensed";
+  display: block;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #666;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+  font-family: 'LatinModernRoman', serif !important;
+}
+
+/* Alternative approach - add to bottom of viewport */
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+body::after {
+  content: "© 2025. CC-BY-SA-4.0 Licensed";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #666;
+  border-top: 1px solid #eee;
+  background: white;
+  font-family: 'LatinModernRoman', serif !important;
+}
