@@ -1,4 +1,33 @@
 
+/* Latin Modern Roman Font Definitions */
+@font-face {
+    font-family: 'Latin Modern Roman';
+    src: url('/assets/fonts/latinmodernroman_10regular_macroman/lmroman10-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Latin Modern Roman';
+    src: url('/assets/fonts/latinmodernroman_10bold_macroman/lmroman10-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Latin Modern Roman';
+    src: url('/assets/fonts/latinmodernroman_10italic_macroman/lmroman10-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Latin Modern Roman';
+    src: url('/assets/fonts/latinmodernroman_10bolditalic_macroman/lmroman10-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
 // Override sidebar styling - new dark grey with transparency and blur
 
 // Force sidebar to be visible - override any opacity settings
@@ -43,8 +72,27 @@
   backdrop-filter: blur(4px) !important;
 }
 
-$font-serif: "Latin Modern Roman", "Merriweather", serif;
-$font-sans : "Latin Modern Roman", "Open Sans", sans-serif;
+// Override sidebar background image
+.sidebar-bg {
+  background-image: url(/assets/img/sidebar-bg.jpg) !important;
+}
+
+// Hide the automatic page title to prevent duplicates
+.page-title {
+  display: none !important;
+}
+
+.navbar{
+  display: none !important; // Hide the navbar
+}
+
+// Reduce the large top padding on the content area
+.content {
+  padding-top: 2rem !important; // Much smaller than the default 8rem
+}
+
+$font-serif: "Latin Modern Roman", "Times New Roman", "Georgia", serif;
+$font-sans : "Latin Modern Roman", "Arial", "Helvetica", sans-serif;
 $base-color: #000;
 $accent    : #bababa;
 
