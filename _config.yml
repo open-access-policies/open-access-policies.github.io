@@ -18,17 +18,27 @@ hydejack:
 remote_theme: "hydecorp/hydejack@v9.2.1"
 
 # Site settings
-title: Portfolio
-tagline: Health Tech & Streaming Solutions
-description: Innovative solutions in healthcare technology and streaming platforms
+title: Open Access Policies
+tagline: Open source policies for any company.
+description: Comprehensive policies for organizations to adapt and implement.
 url: https://open-access-policies.github.io
 baseurl: ""
 
 # Author information
 author:
-  name: Your Name
-  email: your.email@example.com
-  picture: /assets/img/logo.png
+  name   : "Sean Todd"
+  avatar : "/assets/images/headshot.jpg"
+  bio    : "A helpful CISO looking for his next challenge."
+  links  :
+    - label: "GitHub"
+      url: "https://github.com/descentintomael"
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/in/seanmtodd/"
+  # --- Author Social Links ---
+  social:
+    github: open-access-policies
+    email: sean@openaccesspolicies.org
+    linkedin: seanmtodd
 
 # Build settings
 markdown: kramdown
