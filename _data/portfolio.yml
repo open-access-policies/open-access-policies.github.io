@@ -1,0 +1,18 @@
+portfolio_items:
+  - title: "Health Tech"
+    description: "Policies that help healthcare companies comply with SOC2 and HIPAA."
+    image: "/assets/img/health-tech.jpg"
+    link: "/health-tech/"
+    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+    
+  - title: "Streaming"
+    description: "Policies for streaming services that ensure compliance with GDPR, DSA, COPPA, SOC2, and more."
+    image: "/assets/img/streaming.jpg"
+    link: "/streaming/"
+    gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+    
+  - title: "For Hire"
+    description: "Need policies for your company? Let's chat!"
+    image: "/assets/img/for-hire.jpg"
+    link: "mailto:sean@openaccesspolicies.org"
+    gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
