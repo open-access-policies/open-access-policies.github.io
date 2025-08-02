@@ -1,4 +1,16 @@
 portfolio_items:
+  - title: "For Hire"
+    description: "Need policies for your company? Let's chat!"
+    image: "/assets/img/for-hire.jpg"
+    link: "mailto:sean@openaccesspolicies.org"
+    gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+
+  - title: "Minimal SOC2"
+    description: "A set of policies that cover the minimum requirements for SOC2 compliance."
+    image: "/assets/img/minimal-soc2.jpg"
+    link: "/minimal-soc2/"
+    gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+
   - title: "Health Tech"
     description: "Policies that help healthcare companies comply with SOC2 and HIPAA."
     image: "/assets/img/health-tech.jpg"
@@ -10,9 +22,3 @@ portfolio_items:
     image: "/assets/img/streaming.jpg"
     link: "/streaming/"
     gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
-    
-  - title: "For Hire"
-    description: "Need policies for your company? Let's chat!"
-    image: "/assets/img/for-hire.jpg"
-    link: "mailto:sean@openaccesspolicies.org"
-    gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
