@@ -19,7 +19,6 @@ private/
 /test/tmp/
 /test/version_tmp/
 /tmp/
-Gemfile*
 
 # Used by dotenv library to load environment variables.
 .env
@@ -30,8 +29,8 @@ Gemfile*
 # rbenv
 .ruby-version
 
-# Bundler
-Gemfile.lock
+# Bundler (keep Gemfile and Gemfile.lock for GitHub Pages)
+# Note: We need Gemfile and Gemfile.lock for GitHub Actions
 
 # macOS
 .DS_Store
