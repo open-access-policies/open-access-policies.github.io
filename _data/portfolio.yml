@@ -19,8 +19,8 @@ portfolio_items:
 
   - title: "Health Tech (HITRUST)"
     description: "Policies that help healthcare companies comply with HITRUST."
-    image: "/assets/img/health-tech-hitrust.jpg"
-    link: "/health-tech/"
+    image: "/assets/img/health-tech.jpg"
+    link: "/health-tech-hitrust/"
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
     
   - title: "Streaming"
