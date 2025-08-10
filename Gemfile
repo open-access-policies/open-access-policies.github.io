@@ -6,6 +6,12 @@ gem "github-pages", group: :jekyll_plugins
 # Required for local development
 gem "webrick", "~> 1.7"
 
+# Lock activesupport to a version compatible with Ruby 3.1.7
+gem "activesupport", "~> 7.0.0"
+
+# Required for Ruby 3.4+ compatibility
+gem "bigdecimal"
+
 # Windows and JRuby compatibility
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
