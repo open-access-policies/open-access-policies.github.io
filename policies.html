@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare policy sets for SOC2, HIPAA, HITRUST, and GDPR compliance. Find the right template for your organization.">
+  <title>Policy Sets - Open Access Policies</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/latin-modern-fonts.css">
+  <style>
+    body {
+      font-family: 'Latin Modern Roman', Georgia, serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .site-title:hover { color: var(--color-secondary); }
+
+    .site-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .site-nav a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.5rem 0;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active {
+      color: var(--color-secondary);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Page Header */
+    .page-header {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      background: var(--color-bg-light);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      color: var(--color-primary);
+      margin: 0 0 0.5rem;
+    }
+
+    .page-header p {
+      color: var(--color-text-muted);
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    /* Comparison Section */
+    .comparison-section {
+      padding: 3rem 0;
+    }
+
+    .comparison-section h2 {
+      text-align: center;
+      color: var(--color-primary);
+      margin: 0 0 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    th {
+      background: var(--color-primary);
+      color: #fff;
+      font-weight: bold;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:hover { background: var(--color-bg-light); }
+
+    .decision-tip {
+      background: #e8f4f8;
+      border-left: 4px solid var(--color-secondary);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .decision-tip strong {
+      color: var(--color-primary);
+    }
+
+    /* Policy Cards */
+    .policies-section {
+      padding: 3rem 0;
+      background: var(--color-bg-light);
+    }
+
+    .policies-section h2 {
+      text-align: center;
+      color: var(--color-primary);
+      margin: 0 0 2rem;
+    }
+
+    .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .policy-card {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .policy-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .policy-card a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .policy-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .policy-card-content {
+      padding: 1.25rem;
+    }
+
+    .policy-card h3 {
+      color: var(--color-primary);
+      margin: 0 0 0.5rem;
+      font-size: 1.15rem;
+    }
+
+    .policy-card p {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0 0 1rem;
+    }
+
+    .policy-card .framework-badges {
+      margin-bottom: 0.75rem;
+    }
+
+    .policy-card .github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+    }
+
+    .policy-card:hover .github-link {
+      color: var(--color-secondary);
+    }
+
+    /* Custom Work Card */
+    .custom-card {
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+      border: none;
+    }
+
+    .custom-card h3 {
+      color: #333;
+    }
+
+    .custom-card p {
+      color: #555;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--color-bg-light);
+      border-top: 1px solid var(--color-border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+
+    .site-footer a { color: var(--color-text-muted); }
+    .site-footer a:hover { color: var(--color-secondary); }
+    .footer-links { margin-top: 0.5rem; }
+    .footer-links a { margin: 0 0.75rem; }
+
+    @media (max-width: 768px) {
+      table { display: block; overflow-x: auto; }
+      th, td { padding: 0.75rem; font-size: 0.9rem; }
+      .page-header h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-nav">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">Open Access Policies</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/policies.html" class="active">Policies</a>
+      <a href="/start.html">Get Started</a>
+      <a href="/auditors.html">Auditors</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-header">
+    <h1>Choose Your Policy Set</h1>
+    <p>Each set is designed for a specific compliance scenario.</p>
+  </div>
+
+  <section class="comparison-section">
+    <div class="container">
+      <h2>Quick Comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Policy Set</th>
+            <th>Best For</th>
+            <th>Frameworks</th>
+            <th>Complexity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Minimal SOC2</strong></td>
+            <td>Early-stage startups</td>
+            <td><span class="badge badge-soc2">SOC2</span></td>
+            <td>Low</td>
+          </tr>
+          <tr>
+            <td><strong>Health Tech</strong></td>
+            <td>Companies handling PHI</td>
+            <td><span class="badge badge-soc2">SOC2</span> <span class="badge badge-hipaa">HIPAA</span></td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td><strong>Health Tech (HITRUST)</strong></td>
+            <td>HITRUST certification</td>
+            <td><span class="badge badge-hitrust">HITRUST</span> <span class="badge badge-hipaa">HIPAA</span></td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td><strong>Streaming</strong></td>
+            <td>Media services, global users</td>
+            <td><span class="badge badge-soc2">SOC2</span> <span class="badge badge-gdpr">GDPR</span> <span class="badge">COPPA</span> <span class="badge">DSA</span></td>
+            <td>High</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="decision-tip">
+        <strong>Not sure?</strong> Start with <strong>Minimal SOC2</strong> if you're a B2B startup pursuing your first audit. Choose <strong>Health Tech</strong> if you handle protected health information (PHI).
+      </div>
+    </div>
+  </section>
+
+  <section class="policies-section">
+    <div class="container">
+      <h2>All Policy Sets</h2>
+      <div class="policy-grid">
+
+        <article class="policy-card" id="minimal-soc2">
+          <a href="https://github.com/open-access-policies/minimal-soc2">
+            <img src="/assets/img/minimal-soc2.jpg" alt="" loading="lazy">
+            <div class="policy-card-content">
+              <h3>Minimal SOC2</h3>
+              <p>A lean set covering minimum requirements for SOC2 Type I/II. Ideal for early-stage startups.</p>
+              <div class="framework-badges">
+                <span class="badge badge-soc2">SOC2</span>
+              </div>
+              <span class="github-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="policy-card" id="health-tech">
+          <a href="https://github.com/open-access-policies/health-tech">
+            <img src="/assets/img/health-tech.jpg" alt="" loading="lazy">
+            <div class="policy-card-content">
+              <h3>Health Tech</h3>
+              <p>Comprehensive coverage for healthcare technology companies handling protected health information.</p>
+              <div class="framework-badges">
+                <span class="badge badge-soc2">SOC2</span>
+                <span class="badge badge-hipaa">HIPAA</span>
+              </div>
+              <span class="github-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="policy-card" id="health-tech-hitrust">
+          <a href="https://github.com/open-access-policies/health-tech-hitrust">
+            <img src="/assets/img/health-tech-hitrust.jpg" alt="" loading="lazy">
+            <div class="policy-card-content">
+              <h3>Health Tech (HITRUST)</h3>
+              <p>Extended health tech coverage mapped to HITRUST CSF for organizations pursuing certification.</p>
+              <div class="framework-badges">
+                <span class="badge badge-hitrust">HITRUST</span>
+                <span class="badge badge-hipaa">HIPAA</span>
+              </div>
+              <span class="github-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="policy-card" id="streaming">
+          <a href="https://github.com/open-access-policies/streaming">
+            <img src="/assets/img/streaming.jpg" alt="" loading="lazy">
+            <div class="policy-card-content">
+              <h3>Streaming</h3>
+              <p>For media and streaming services with global audiences. Includes privacy regulations.</p>
+              <div class="framework-badges">
+                <span class="badge badge-soc2">SOC2</span>
+                <span class="badge badge-gdpr">GDPR</span>
+                <span class="badge">COPPA</span>
+                <span class="badge">DSA</span>
+              </div>
+              <span class="github-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="policy-card custom-card">
+          <a href="mailto:sean@openaccesspolicies.org">
+            <img src="/assets/img/for-hire.jpg" alt="" loading="lazy">
+            <div class="policy-card-content">
+              <h3>Need Something Custom?</h3>
+              <p>Different industry or framework requirements? Let's discuss your needs.</p>
+              <span class="github-link" style="color: #555;">Contact for custom work &rarr;</span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Open Access Policies. Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a>.</p>
+  <div class="footer-links">
+    <a href="https://github.com/open-access-policies">GitHub</a>
+    <a href="/about.html">About</a>
+    <a href="mailto:sean@openaccesspolicies.org">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

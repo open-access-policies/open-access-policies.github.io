@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Sean Todd, CISO and creator of Open Access Policies. Custom compliance consulting available.">
+  <title>About - Open Access Policies</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/latin-modern-fonts.css">
+  <style>
+    body {
+      font-family: 'Latin Modern Roman', Georgia, serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .site-title:hover { color: var(--color-secondary); }
+
+    .site-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .site-nav a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.5rem 0;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active {
+      color: var(--color-secondary);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Page Header */
+    .page-header {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      background: var(--color-bg-light);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      color: var(--color-primary);
+      margin: 0;
+    }
+
+    /* Author Section */
+    .author-section {
+      padding: 3rem 0;
+    }
+
+    .author-card {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .author-avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 3px solid var(--color-border);
+    }
+
+    .author-info h2 {
+      color: var(--color-primary);
+      margin: 0 0 0.75rem;
+      font-size: 1.5rem;
+    }
+
+    .author-info p {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin: 0 0 1rem;
+    }
+
+    .author-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .author-links a {
+      color: var(--color-secondary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .author-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mission Section */
+    .mission-section {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .mission-section h2 {
+      color: var(--color-primary);
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+    }
+
+    .mission-section p {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin: 0 0 1rem;
+    }
+
+    /* Custom Work CTA */
+    .custom-cta {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .custom-cta h2 {
+      color: #fff;
+      margin: 0 0 0.75rem;
+      font-size: 1.5rem;
+    }
+
+    .custom-cta p {
+      color: rgba(255,255,255,0.9);
+      margin: 0 0 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .custom-cta .cta-button {
+      background: #fff;
+      color: #764ba2;
+    }
+
+    .custom-cta .cta-button:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--color-bg-light);
+      border-top: 1px solid var(--color-border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+
+    .site-footer a { color: var(--color-text-muted); }
+    .site-footer a:hover { color: var(--color-secondary); }
+    .footer-links { margin-top: 0.5rem; }
+    .footer-links a { margin: 0 0.75rem; }
+
+    @media (max-width: 600px) {
+      .author-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .author-links {
+        justify-content: center;
+      }
+      .page-header h1 { font-size: 1.75rem; }
+      .custom-cta { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-nav">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container" style="max-width: 1100px;">
+    <a href="/" class="site-title">Open Access Policies</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/policies.html">Policies</a>
+      <a href="/start.html">Get Started</a>
+      <a href="/auditors.html">Auditors</a>
+      <a href="/about.html" class="active">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-header">
+    <h1>About</h1>
+  </div>
+
+  <div class="container">
+    <section class="author-section">
+      <div class="author-card">
+        <img src="/assets/img/logo.png" alt="Sean Todd" class="author-avatar">
+        <div class="author-info">
+          <h2>Sean Todd</h2>
+          <p>I'm a Chief Information Security Officer with experience building compliance programs at healthcare technology, fintech, and SaaS companies. I've led organizations through SOC2, HIPAA, and HITRUST audits.</p>
+          <p>These policies exist because compliance shouldn't block small companies from building great products. Startups deserve access to the same quality policies that enterprises pay consultants thousands of dollars to create.</p>
+          <div class="author-links">
+            <a href="https://github.com/descentintomael">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/seanmtodd/">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:sean@openaccesspolicies.org">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-section">
+      <h2>Why Open Source?</h2>
+      <p>Most compliance policy templates cost $5,000-$20,000 from consultants. That's a real barrier for startups already stretched thin. By open-sourcing these policies, I hope to level the playing field.</p>
+      <p>The CC-BY-SA-4.0 license ensures these stay free. You can use them commercially, modify them, and even build a business around them. Just share improvements back to the community.</p>
+    </section>
+
+    <div class="custom-cta">
+      <h2>Need Custom Work?</h2>
+      <p>Different industry, unique framework requirements, or need help implementing?</p>
+      <a href="mailto:sean@openaccesspolicies.org" class="cta-button">Get in Touch</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Open Access Policies. Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a>.</p>
+  <div class="footer-links">
+    <a href="https://github.com/open-access-policies">GitHub</a>
+    <a href="/about.html">About</a>
+    <a href="mailto:sean@openaccesspolicies.org">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
