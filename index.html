@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free, open-source compliance policies for SOC2, HIPAA, HITRUST, and GDPR. Production-ready templates licensed under CC-BY-SA-4.0.">
+  <title>Open Access Policies - Free Compliance Policy Templates</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/latin-modern-fonts.css">
+  <style>
+    /* Base reset and typography */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Latin Modern Roman', Georgia, serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Latin Modern Roman', Georgia, serif;
+      color: #2c3e50;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    .site-header {
+      background: #f8f9fa;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 1rem 0;
+    }
+
+    .site-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin: 0;
+    }
+
+    .site-nav a {
+      margin-left: 1.5rem;
+      color: #666;
+    }
+
+    .site-nav a:hover {
+      color: #3498db;
+    }
+
+    /* Code blocks */
+    pre {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: 'Monaco', 'Menlo', monospace;
+      font-size: 0.9rem;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    th {
+      background: #2c3e50;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background: #f8f9fa;
+    }
+
+    /* Mobile responsive tables */
+    @media (max-width: 768px) {
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+
+      th, td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Open Access Policies</h1>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#policies">Policies</a>
+      <a href="#getting-started">Get Started</a>
+      <a href="#control-mappings">For Auditors</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/open-access-policies">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="hero-section">
+    <h1 class="hero-headline">Free, Open-Source Compliance Policies</h1>
+    <p class="hero-subheadline">
+      Production-ready policy templates for SOC2, HIPAA, HITRUST, and GDPR.
+      Professionally written, audit-tested, and free to use under CC-BY-SA-4.0.
+    </p>
+    <p class="hero-audience">
+      <strong>Built for:</strong> Startups pursuing compliance &bull; Compliance officers building programs &bull; Developers implementing security controls
+    </p>
+    <div style="margin-top: 1.5rem;">
+      <a href="#policies" class="cta-button">Browse Policies</a>
+      <a href="#getting-started" class="cta-button cta-secondary" style="margin-left: 1rem;">Getting Started</a>
+    </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+      <a href="#control-mappings" style="color: #666;">Auditor? View control mappings &rarr;</a>
+    </p>
+  </div>
+
+  <div class="container">
+    <h2 class="text-center mt-lg">Why Trust These Policies?</h2>
+
+    <div class="trust-section">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <h3>Created by a CISO</h3>
+          <p>Written by <a href="#about">Sean Todd</a>, an experienced Chief Information Security Officer who has built and maintained compliance programs at multiple organizations.</p>
+        </div>
+        <div class="trust-item">
+          <h3>Audit-Tested</h3>
+          <p>These policies have been used in real SOC2, HIPAA, and HITRUST audits. They're designed to satisfy auditor expectations, not just check boxes.</p>
+        </div>
+        <div class="trust-item">
+          <h3>Actively Maintained</h3>
+          <p>Policies are updated when frameworks change. Each repository includes version history and clear documentation of changes.</p>
+        </div>
+        <div class="trust-item">
+          <h3>Open Source</h3>
+          <p>Licensed under <a href="#licensing">CC-BY-SA-4.0</a>. Use them commercially, modify them freely, and contribute improvements back to the community.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="comparison" class="text-center">Which Policy Set Is Right for You?</h2>
+
+    <div class="comparison-section">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Policy Set</th>
+            <th>Best For</th>
+            <th>Frameworks</th>
+            <th>Complexity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Minimal SOC2</strong></td>
+            <td>Early-stage startups needing basic SOC2</td>
+            <td><span class="badge badge-soc2">SOC2</span></td>
+            <td>Low</td>
+          </tr>
+          <tr>
+            <td><strong>Health Tech</strong></td>
+            <td>Healthcare companies handling PHI</td>
+            <td><span class="badge badge-soc2">SOC2</span> <span class="badge badge-hipaa">HIPAA</span></td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td><strong>Health Tech (HITRUST)</strong></td>
+            <td>Healthcare companies seeking HITRUST certification</td>
+            <td><span class="badge badge-hitrust">HITRUST</span> <span class="badge badge-hipaa">HIPAA</span></td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td><strong>Streaming</strong></td>
+            <td>Media/streaming services with global users</td>
+            <td><span class="badge badge-soc2">SOC2</span> <span class="badge badge-gdpr">GDPR</span> <span class="badge">COPPA</span> <span class="badge">DSA</span></td>
+            <td>High</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="text-center" style="margin-top: 1rem; color: #666;">
+        <strong>Not sure which to choose?</strong> Start with Minimal SOC2 if you're a B2B startup. Add Health Tech if you handle healthcare data.
+      </p>
+    </div>
+
+    <h2 id="control-mappings">For Auditors: Control Mappings</h2>
+
+    <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+      <p>Each policy set includes detailed control mappings in the repository documentation. Here's a high-level overview of what's covered:</p>
+
+      <h3>SOC 2 Trust Services Criteria Coverage</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th style="text-align: center;">Minimal SOC2</th>
+            <th style="text-align: center;">Health Tech</th>
+            <th style="text-align: center;">Streaming</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>CC1 - Control Environment</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>CC2 - Communication & Information</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>CC3 - Risk Assessment</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>CC4 - Monitoring Activities</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>CC5 - Control Activities</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>CC6 - Logical & Physical Access</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>CC7 - System Operations</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>CC8 - Change Management</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>CC9 - Risk Mitigation</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+        </tbody>
+      </table>
+
+      <h3>HIPAA Security Rule Coverage (Health Tech)</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Safeguard</th>
+            <th style="text-align: center;">&sect;164.308 Administrative</th>
+            <th style="text-align: center;">&sect;164.310 Physical</th>
+            <th style="text-align: center;">&sect;164.312 Technical</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Access Control</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>Audit Controls</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&mdash;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>Integrity Controls</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>Transmission Security</td><td style="text-align: center;">&mdash;</td><td style="text-align: center;">&mdash;</td><td style="text-align: center;">&#10003;</td></tr>
+          <tr><td>Facility Access</td><td style="text-align: center;">&mdash;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&mdash;</td></tr>
+          <tr><td>Workstation Security</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&mdash;</td></tr>
+          <tr><td>Contingency Planning</td><td style="text-align: center;">&#10003;</td><td style="text-align: center;">&mdash;</td><td style="text-align: center;">&mdash;</td></tr>
+        </tbody>
+      </table>
+
+      <h3>HITRUST CSF Coverage (Health Tech HITRUST)</h3>
+
+      <p>The HITRUST policy set maps to all 19 control domains of the HITRUST CSF, including:</p>
+      <ul>
+        <li><strong>Domain 0</strong>: Information Security Management Program</li>
+        <li><strong>Domain 1</strong>: Access Control</li>
+        <li><strong>Domain 2</strong>: Human Resources Security</li>
+        <li><strong>Domain 3</strong>: Risk Management</li>
+        <li><strong>Domain 6</strong>: Compliance</li>
+        <li><strong>Domain 9</strong>: Physical & Environmental Security</li>
+        <li><strong>Domain 10</strong>: Communications & Operations Management</li>
+        <li><strong>Domain 11</strong>: Information Systems Acquisition, Development & Maintenance</li>
+        <li><strong>Domain 12</strong>: Incident Management</li>
+        <li><strong>Domain 13</strong>: Business Continuity Management</li>
+      </ul>
+
+      <p style="margin-top: 1.5rem; font-style: italic; color: #666;">
+        Full control mapping spreadsheets (Excel/CSV) are available in each repository's <code>/docs</code> folder.
+      </p>
+    </div>
+
+    <h2 id="policies">Policy Sets</h2>
+
+    <div class="portfolio-grid" role="list" aria-label="Policy sets">
+
+      <article class="portfolio-item" role="listitem">
+        <a href="/minimal-soc2/" aria-label="View Minimal SOC2 policy set">
+          <img src="/assets/img/minimal-soc2.jpg" alt="Minimal SOC2 policy set" loading="lazy">
+          <h2>Minimal SOC2</h2>
+          <p>A lean set of policies covering the minimum requirements for SOC2 Type I/II compliance. Perfect for early-stage startups.</p>
+          <div class="framework-badges" aria-label="Compliance frameworks covered">
+            <span class="badge badge-soc2">SOC2</span>
+          </div>
+          <p class="github-link" style="margin-top: 1rem; font-size: 0.9rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.25rem;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </p>
+        </a>
+      </article>
+
+      <article class="portfolio-item" role="listitem">
+        <a href="/health-tech/" aria-label="View Health Tech policy set">
+          <img src="/assets/img/health-tech.jpg" alt="Health Tech policy set" loading="lazy">
+          <h2>Health Tech</h2>
+          <p>Comprehensive policies for healthcare technology companies. Covers SOC2 and HIPAA requirements for handling PHI.</p>
+          <div class="framework-badges" aria-label="Compliance frameworks covered">
+            <span class="badge badge-soc2">SOC2</span>
+            <span class="badge badge-hipaa">HIPAA</span>
+          </div>
+          <p class="github-link" style="margin-top: 1rem; font-size: 0.9rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.25rem;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </p>
+        </a>
+      </article>
+
+      <article class="portfolio-item" role="listitem">
+        <a href="/health-tech-hitrust/" aria-label="View Health Tech HITRUST policy set">
+          <img src="/assets/img/health-tech-hitrust.jpg" alt="Health Tech HITRUST policy set" loading="lazy">
+          <h2>Health Tech (HITRUST)</h2>
+          <p>Extended health tech policies mapped to HITRUST CSF requirements. For organizations pursuing HITRUST certification.</p>
+          <div class="framework-badges" aria-label="Compliance frameworks covered">
+            <span class="badge badge-hitrust">HITRUST</span>
+            <span class="badge badge-hipaa">HIPAA</span>
+          </div>
+          <p class="github-link" style="margin-top: 1rem; font-size: 0.9rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.25rem;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </p>
+        </a>
+      </article>
+
+      <article class="portfolio-item" role="listitem">
+        <a href="/streaming/" aria-label="View Streaming policy set">
+          <img src="/assets/img/streaming.jpg" alt="Streaming policy set" loading="lazy">
+          <h2>Streaming</h2>
+          <p>Policies for media and streaming services with global audiences. Covers SOC2, GDPR, COPPA, DSA, and more.</p>
+          <div class="framework-badges" aria-label="Compliance frameworks covered">
+            <span class="badge badge-soc2">SOC2</span>
+            <span class="badge badge-gdpr">GDPR</span>
+            <span class="badge badge-coppa">COPPA</span>
+            <span class="badge badge-dsa">DSA</span>
+          </div>
+          <p class="github-link" style="margin-top: 1rem; font-size: 0.9rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.25rem;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </p>
+        </a>
+      </article>
+
+      <article class="portfolio-item" role="listitem">
+        <a href="mailto:sean@openaccesspolicies.org" aria-label="Contact for custom policies">
+          <img src="/assets/img/for-hire.jpg" alt="Custom policy work" loading="lazy">
+          <h2>For Hire</h2>
+          <p>Need custom policies for your specific industry or compliance requirements? Let's discuss your needs.</p>
+        </a>
+      </article>
+
+    </div>
+
+    <h2 id="getting-started">Getting Started</h2>
+
+    <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+
+      <h3>1. Choose Your Policy Set</h3>
+      <p>Review the <a href="#comparison">comparison table</a> above to find the right fit for your organization.</p>
+
+      <h3>2. Clone or Fork the Repository</h3>
+      <p>Each policy set is hosted on GitHub. Clone or fork the repository to your own organization:</p>
+      <pre><code>git clone https://github.com/open-access-policies/health-tech.git</code></pre>
+
+      <h3>3. Customize for Your Organization</h3>
+      <p>Replace placeholder text (like <code>[Company Name]</code>) with your organization's information. Modify policies to match your actual practices.</p>
+
+      <h3>4. Implement and Document</h3>
+      <p>Policies are only valuable if they're implemented. Use these as a foundation, then document how your organization actually follows them.</p>
+
+      <h3>5. Keep Up to Date</h3>
+      <p>Watch the repositories for updates. When frameworks change, we update the policies. Pull updates and merge them with your customizations.</p>
+
+      <p style="margin-top: 1.5rem;">
+        <a href="https://github.com/open-access-policies" class="cta-button">View on GitHub</a>
+      </p>
+
+    </div>
+
+    <h2 id="licensing">Licensing FAQ</h2>
+
+    <div class="faq-section">
+      <div class="faq-item">
+        <p class="faq-question">Can I use these policies for my company?</p>
+        <p class="faq-answer">Yes! These policies are licensed under CC-BY-SA-4.0, which allows commercial use. You can use them at your for-profit company without paying anything.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-question">Can I modify the policies?</p>
+        <p class="faq-answer">Absolutely. In fact, you should modify them to match your organization's actual practices. Generic policies won't help you pass an audit - customized ones will.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-question">Do I need to give credit?</p>
+        <p class="faq-answer">Yes, CC-BY-SA-4.0 requires attribution. A simple note in your internal documentation or policy footer is sufficient. You don't need to publicly display attribution.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-question">Can consultants use these with clients?</p>
+        <p class="faq-answer">Yes. Consultants and compliance professionals can use these policies as templates for their clients. The same attribution and share-alike requirements apply.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-question">What does "share-alike" mean?</p>
+        <p class="faq-answer">If you create derivative works and distribute them publicly, those derivatives must use the same CC-BY-SA-4.0 license. Internal company use doesn't require sharing your modifications.</p>
+      </div>
+    </div>
+
+    <h2 id="about">About the Author</h2>
+
+    <div class="about-section">
+      <div class="author-card">
+        <img src="/assets/img/logo.png" alt="Open Access Policies" class="author-avatar">
+        <div class="author-info">
+          <h3>Sean Todd</h3>
+          <p>Sean is a Chief Information Security Officer with experience building compliance programs at healthcare technology, fintech, and SaaS companies. He's led organizations through successful SOC2, HIPAA, and HITRUST audits.</p>
+          <p>These policies were created because compliance shouldn't be a barrier to building great products. Small companies deserve access to the same quality policies that enterprises pay consultants thousands of dollars to create.</p>
+          <div class="author-links">
+            <a href="https://github.com/descentintomael">GitHub</a>
+            <a href="https://www.linkedin.com/in/seanmtodd/">LinkedIn</a>
+            <a href="mailto:sean@openaccesspolicies.org">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center">Need Custom Policies?</h2>
+
+    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); border-radius: 8px; margin: 2rem 0;">
+      <h3 style="color: #333; margin-bottom: 1rem;">Looking for something specific?</h3>
+      <p style="color: #555; margin-bottom: 1.5rem;">Need policies tailored to your industry, custom framework mappings, or help implementing your compliance program?</p>
+      <a href="mailto:sean@openaccesspolicies.org" class="cta-button" style="background: #333;">Get in Touch</a>
+    </div>
+
+  </div>
+</main>
+
+<footer role="contentinfo" style="margin-top: 3rem; padding: 2rem; border-top: 1px solid #e0e0e0; text-align: center; color: #666; background: #f8f9fa;">
+  <p>&copy; 2026 Open Access Policies. Content licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a>.</p>
+  <p><a href="https://github.com/open-access-policies">GitHub</a> &bull; <a href="mailto:sean@openaccesspolicies.org">Contact</a></p>
+</footer>
+
+</body>
+</html>
