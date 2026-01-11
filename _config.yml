@@ -18,7 +18,7 @@ additional_css:
   - /assets/css/latin-modern-fonts.css
 
 # --- Favicon Settings ---
-favicon: /assets/images/logo.png
+favicon: /assets/img/logo.png
 
 
 # --- Defaults ---
@@ -49,7 +49,7 @@ sass:
 
 author:
   name   : "Sean Todd"
-  avatar : "/assets/images/headshot.jpg"
+  avatar : "/assets/img/logo.png"
   bio    : "A helpful CISO looking for his next challenge."
   links  :
     - label: "GitHub"

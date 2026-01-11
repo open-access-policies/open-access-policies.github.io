@@ -1,23 +1,168 @@
 <!-- Portfolio Grid - Uses data from _data/portfolio.yml -->
 {% assign portfolio_data = site.data.portfolio.portfolio_items %}
 
-<div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
-  
+<div class="portfolio-grid" role="list" aria-label="Policy sets">
+
   {% for item in portfolio_data %}
-  <div class="portfolio-item" style="text-align: center; padding: 2rem; border: 1px solid #e0e0e0; border-radius: 8px; transition: transform 0.3s ease;">
-    <a href="{{ item.link }}" style="text-decoration: none; color: inherit;">
-      <img src="{{ item.image }}" alt="{{ item.title }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; background: {{ item.gradient }}; margin-bottom: 1rem;" onerror="this.style.background='{{ item.gradient }}'; this.style.display='block';">
-      <h2 style="margin: 1rem 0 0.5rem 0; color: #333;">{{ item.title }}</h2>
-      <p style="color: #666; line-height: 1.5;">{{ item.description }}</p>
+  <article class="portfolio-item" role="listitem">
+    <a href="{{ item.link }}" {% if item.link contains 'mailto:' %}aria-label="Contact for {{ item.title }}"{% else %}aria-label="View {{ item.title }} policy set"{% endif %}>
+      <img src="{{ item.image }}" alt="{{ item.title }} policy set" loading="lazy" onerror="this.style.background='{{ item.gradient }}'; this.style.display='block';">
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+
+      {% if item.frameworks.size > 0 %}
+      <div class="framework-badges" aria-label="Compliance frameworks covered">
+        {% for framework in item.frameworks %}
+          {% assign badge_class = framework | downcase %}
+          <span class="badge badge-{{ badge_class }}">{{ framework }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if item.github %}
+      <p class="github-link" style="margin-top: 1rem; font-size: 0.9rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.25rem;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        View on GitHub
+      </p>
+      {% endif %}
     </a>
-  </div>
+  </article>
   {% endfor %}
 
 </div>
 
 <style>
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.portfolio-item {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .portfolio-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.portfolio-item a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.portfolio-item h2 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.portfolio-item p {
+  color: #666;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.portfolio-item .github-link {
+  color: #666;
+}
+
+.portfolio-item:hover .github-link {
+  color: #3498db;
+}
+
+/* Ensure touch targets are adequate */
+.portfolio-item a {
+  min-height: 44px;
+}
+
+/* Focus styles for accessibility */
+.portfolio-item a:focus {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Framework badges */
+.framework-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  background: #f0f0f0;
+  color: #666;
+}
+
+.badge-soc2 {
+  background: #e8f4f8;
+  color: #2980b9;
+}
+
+.badge-hipaa {
+  background: #e8f8e8;
+  color: #27ae60;
+}
+
+.badge-hitrust {
+  background: #f8e8f4;
+  color: #8e44ad;
+}
+
+.badge-gdpr {
+  background: #f8f4e8;
+  color: #d35400;
+}
+
+.badge-coppa {
+  background: #f0e8f8;
+  color: #7b68ee;
+}
+
+.badge-dsa {
+  background: #e8f0f8;
+  color: #4682b4;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .portfolio-item a {
+    padding: 1rem;
+  }
+
+  .portfolio-item img {
+    height: 150px;
+  }
 }
 </style>
