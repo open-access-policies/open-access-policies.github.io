@@ -19,6 +19,9 @@ sitemap: true
     <a href="#policies" class="cta-button">Browse Policies</a>
     <a href="#getting-started" class="cta-button cta-secondary" style="margin-left: 1rem;">Getting Started</a>
   </div>
+  <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+    <a href="#control-mappings" style="color: #666;">Auditor? View control mappings →</a>
+  </p>
 </div>
 
 ## Why Trust These Policies?
@@ -89,6 +92,59 @@ sitemap: true
   <p class="text-center" style="margin-top: 1rem; color: #666;">
     <strong>Not sure which to choose?</strong> Start with Minimal SOC2 if you're a B2B startup. Add Health Tech if you handle healthcare data.
   </p>
+</div>
+
+## For Auditors: Control Mappings
+{: #control-mappings}
+
+<div class="control-mapping-section" style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+
+Each policy set includes detailed control mappings in the repository documentation. Here's a high-level overview of what's covered:
+
+### SOC 2 Trust Services Criteria Coverage
+
+| Criteria | Minimal SOC2 | Health Tech | Streaming |
+|----------|:------------:|:-----------:|:---------:|
+| CC1 - Control Environment | ✓ | ✓ | ✓ |
+| CC2 - Communication & Information | ✓ | ✓ | ✓ |
+| CC3 - Risk Assessment | ✓ | ✓ | ✓ |
+| CC4 - Monitoring Activities | ✓ | ✓ | ✓ |
+| CC5 - Control Activities | ✓ | ✓ | ✓ |
+| CC6 - Logical & Physical Access | ✓ | ✓ | ✓ |
+| CC7 - System Operations | ✓ | ✓ | ✓ |
+| CC8 - Change Management | ✓ | ✓ | ✓ |
+| CC9 - Risk Mitigation | ✓ | ✓ | ✓ |
+
+### HIPAA Security Rule Coverage (Health Tech)
+
+| Safeguard | §164.308 Administrative | §164.310 Physical | §164.312 Technical |
+|-----------|:-----------------------:|:-----------------:|:------------------:|
+| Access Control | ✓ | ✓ | ✓ |
+| Audit Controls | ✓ | — | ✓ |
+| Integrity Controls | ✓ | ✓ | ✓ |
+| Transmission Security | — | — | ✓ |
+| Facility Access | — | ✓ | — |
+| Workstation Security | ✓ | ✓ | — |
+| Contingency Planning | ✓ | — | — |
+
+### HITRUST CSF Coverage (Health Tech HITRUST)
+
+The HITRUST policy set maps to all 19 control domains of the HITRUST CSF, including:
+- **Domain 0**: Information Security Management Program
+- **Domain 1**: Access Control
+- **Domain 2**: Human Resources Security
+- **Domain 3**: Risk Management
+- **Domain 6**: Compliance
+- **Domain 9**: Physical & Environmental Security
+- **Domain 10**: Communications & Operations Management
+- **Domain 11**: Information Systems Acquisition, Development & Maintenance
+- **Domain 12**: Incident Management
+- **Domain 13**: Business Continuity Management
+
+<p style="margin-top: 1.5rem; font-style: italic; color: #666;">
+  Full control mapping spreadsheets (Excel/CSV) are available in each repository's <code>/docs</code> folder.
+</p>
+
 </div>
 
 ## Policy Sets
