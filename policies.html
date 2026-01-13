@@ -174,11 +174,51 @@
       color: inherit;
     }
 
-    .policy-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
+    /* Icon Header replacing images */
+    .policy-icon-header {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-bg-light);
+      border-bottom: 1px solid var(--color-border);
     }
+
+    .policy-icon-header i {
+      font-size: 3rem;
+      color: var(--color-text-muted);
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .policy-card:hover .policy-icon-header i {
+      transform: scale(1.1);
+    }
+
+    /* Icon color schemes per policy type */
+    .policy-icon-header.icon-soc2 {
+      background: linear-gradient(135deg, #e8f4f8 0%, #d1e9f0 100%);
+    }
+    .policy-icon-header.icon-soc2 i { color: #2980b9; }
+
+    .policy-icon-header.icon-health {
+      background: linear-gradient(135deg, #e8f8e8 0%, #d1f0d1 100%);
+    }
+    .policy-icon-header.icon-health i { color: #27ae60; }
+
+    .policy-icon-header.icon-hitrust {
+      background: linear-gradient(135deg, #f8e8f4 0%, #f0d1e9 100%);
+    }
+    .policy-icon-header.icon-hitrust i { color: #8e44ad; }
+
+    .policy-icon-header.icon-streaming {
+      background: linear-gradient(135deg, #f8f4e8 0%, #f0e9d1 100%);
+    }
+    .policy-icon-header.icon-streaming i { color: #d35400; }
+
+    .policy-icon-header.icon-custom {
+      background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+    }
+    .policy-icon-header.icon-custom i { color: #be185d; }
 
     .policy-card-content {
       padding: 1.25rem;
@@ -211,20 +251,6 @@
 
     .policy-card:hover .doc-link {
       color: var(--color-secondary);
-    }
-
-    /* Custom Work Card */
-    .custom-card {
-      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-      border: none;
-    }
-
-    .custom-card h3 {
-      color: #333;
-    }
-
-    .custom-card p {
-      color: #555;
     }
 
     /* Footer */
@@ -324,7 +350,9 @@
 
         <article class="policy-card" id="minimal-soc2">
           <a href="https://openaccesspolicies.org/minimal-soc2/">
-            <img src="/assets/img/minimal-soc2.jpg" alt="" loading="lazy">
+            <div class="policy-icon-header icon-soc2">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
             <div class="policy-card-content">
               <h3>Minimal SOC2</h3>
               <p>A lean set covering minimum requirements for SOC2 Type I/II. Ideal for early-stage startups.</p>
@@ -341,7 +369,9 @@
 
         <article class="policy-card" id="health-tech">
           <a href="https://openaccesspolicies.org/health-tech/">
-            <img src="/assets/img/health-tech.jpg" alt="" loading="lazy">
+            <div class="policy-icon-header icon-health">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
             <div class="policy-card-content">
               <h3>Health Tech</h3>
               <p>Comprehensive coverage for healthcare technology companies handling protected health information.</p>
@@ -359,7 +389,9 @@
 
         <article class="policy-card" id="health-tech-hitrust">
           <a href="https://openaccesspolicies.org/health-tech-hitrust/">
-            <img src="/assets/img/health-tech-hitrust.jpg" alt="" loading="lazy">
+            <div class="policy-icon-header icon-hitrust">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
             <div class="policy-card-content">
               <h3>Health Tech (HITRUST)</h3>
               <p>Extended health tech coverage mapped to HITRUST CSF for organizations pursuing certification.</p>
@@ -377,7 +409,9 @@
 
         <article class="policy-card" id="streaming">
           <a href="https://openaccesspolicies.org/streaming/">
-            <img src="/assets/img/streaming.jpg" alt="" loading="lazy">
+            <div class="policy-icon-header icon-streaming">
+              <i class="fa-solid fa-play"></i>
+            </div>
             <div class="policy-card-content">
               <h3>Streaming</h3>
               <p>For media and streaming services with global audiences. Includes privacy regulations.</p>
@@ -395,13 +429,18 @@
           </a>
         </article>
 
-        <article class="policy-card custom-card">
+        <article class="policy-card" id="custom">
           <a href="mailto:sean@openaccesspolicies.org">
-            <img src="/assets/img/for-hire.jpg" alt="" loading="lazy">
+            <div class="policy-icon-header icon-custom">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
             <div class="policy-card-content">
               <h3>Need Something Custom?</h3>
               <p>Different industry or framework requirements? Let's discuss your needs.</p>
-              <span class="github-link" style="color: #555;">Contact for custom work &rarr;</span>
+              <span class="doc-link">
+                <i class="fa-solid fa-envelope"></i>
+                Contact for custom work
+              </span>
             </div>
           </a>
         </article>
