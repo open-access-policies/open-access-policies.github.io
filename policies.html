@@ -220,6 +220,31 @@
     }
     .policy-icon-header.icon-custom i { color: #be185d; }
 
+    .policy-icon-header.icon-fintech {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    }
+    .policy-icon-header.icon-fintech i { color: #d97706; }
+
+    .policy-icon-header.icon-edtech {
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    }
+    .policy-icon-header.icon-edtech i { color: #0284c7; }
+
+    .badge-pci {
+      background: #fef3c7;
+      color: #b45309;
+    }
+
+    .badge-glba {
+      background: #fef9c3;
+      color: #a16207;
+    }
+
+    .badge-ferpa {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
     .policy-card-content {
       padding: 1.25rem;
     }
@@ -334,6 +359,18 @@
             <td><span class="badge badge-soc2">SOC2</span> <span class="badge badge-gdpr">GDPR</span> <span class="badge">COPPA</span> <span class="badge">DSA</span></td>
             <td>High</td>
           </tr>
+          <tr>
+            <td><strong>Fintech Payments</strong></td>
+            <td>Payment processors, fintech</td>
+            <td><span class="badge badge-soc2">SOC2</span> <span class="badge badge-pci">PCI-DSS</span> <span class="badge badge-glba">GLBA</span></td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td><strong>Ed-Tech</strong></td>
+            <td>Education technology, student data</td>
+            <td><span class="badge badge-soc2">SOC2</span> <span class="badge badge-ferpa">FERPA</span> <span class="badge">COPPA</span></td>
+            <td>Medium</td>
+          </tr>
         </tbody>
       </table>
 
@@ -420,6 +457,48 @@
                 <span class="badge badge-gdpr">GDPR</span>
                 <span class="badge">COPPA</span>
                 <span class="badge">DSA</span>
+              </div>
+              <span class="doc-link">
+                <i class="fa-solid fa-book-open"></i>
+                View Policies
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="policy-card" id="fintech-payments">
+          <a href="https://openaccesspolicies.org/fintech-payments/">
+            <div class="policy-icon-header icon-fintech">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <div class="policy-card-content">
+              <h3>Fintech Payments</h3>
+              <p>Comprehensive coverage for payment processors and fintech companies handling cardholder data.</p>
+              <div class="framework-badges">
+                <span class="badge badge-soc2">SOC2</span>
+                <span class="badge badge-pci">PCI-DSS</span>
+                <span class="badge badge-glba">GLBA</span>
+              </div>
+              <span class="doc-link">
+                <i class="fa-solid fa-book-open"></i>
+                View Policies
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <article class="policy-card" id="ed-tech">
+          <a href="https://openaccesspolicies.org/ed-tech/">
+            <div class="policy-icon-header icon-edtech">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="policy-card-content">
+              <h3>Ed-Tech</h3>
+              <p>Policies for educational technology companies handling student data and children's privacy.</p>
+              <div class="framework-badges">
+                <span class="badge badge-soc2">SOC2</span>
+                <span class="badge badge-ferpa">FERPA</span>
+                <span class="badge">COPPA</span>
               </div>
               <span class="doc-link">
                 <i class="fa-solid fa-book-open"></i>
